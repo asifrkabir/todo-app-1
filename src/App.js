@@ -55,7 +55,7 @@ function App() {
   return (
     <div className="App container">
       <header>
-        <h1>Asif's Todo List</h1>
+        <h1 className="text-center" style={{color: "white", paddingTop: "20px"}}>Asif's Todo List</h1>
       </header>
 
       <Form

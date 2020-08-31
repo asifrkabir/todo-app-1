@@ -20,18 +20,22 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
   };
 
   return (
-    <div>
+    <div className="container">
       <form>
-        <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
-        <button onClick={submitTodoHandler} className="todo-button" type="submit">
-          <i className="fas fa-plus-square"></i>
-        </button>
-        <div className="select">
-          <select onChange={statusHandler} name="todos" className="filter-todo">
-            <option value="all">All</option>
-            <option value="completed">Completed</option>
-            <option value="incomplete">Incomplete</option>
-          </select>
+        <div className="">
+          <div className="">
+            <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" style={{maxWidth: "72vw"}} />
+            <button onClick={submitTodoHandler} className="todo-button" type="submit">
+              <i className="fas fa-plus-square"></i>
+            </button>
+          </div>
+          <div className="select">
+            <select onChange={statusHandler} name="todos" className="filter-todo" style={{backgroundColor: 'white'}}>
+              <option value="all">All</option>
+              <option value="completed">Completed</option>
+              <option value="incomplete">Incomplete</option>
+            </select>
+          </div>
         </div>
       </form>
     </div>
